@@ -38,7 +38,9 @@ dom-portal {
 }
 ```
 
-### With Babel
+### Build tools
+
+#### With Babel
 
 You can use the `@babel/plugin-transform-react-jsx` package:
 
@@ -50,6 +52,19 @@ You can use the `@babel/plugin-transform-react-jsx` package:
       { "pragma": "h", "pragmaFrag": "Fragment" }
     ]
   ]
+}
+```
+
+#### With TypeScript
+
+In the `tsconfig.json`:
+
+```json
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "h"
+  }
 }
 ```
 
