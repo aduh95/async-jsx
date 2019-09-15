@@ -7,6 +7,7 @@
     "sourceMap": true,
     "lib": ["esnext", "dom"],
     "target": "ESNext",
+    "declaration": true,
     "outDir": "dist"
   },
   "include": ["src/**/*"],
