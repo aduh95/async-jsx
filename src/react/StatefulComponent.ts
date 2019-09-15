@@ -39,7 +39,7 @@ customElements.define(STATEFUL_ELEMENT_NAME, StatefulElement);
  * However, it is vastly less efficient because no virtual DOM is being used, which
  * means all the nodes from the render function have to be recreated at each render.
  */
-export class StatefulComponent extends Component {
+export default class StatefulComponent extends Component {
   private _domElement: StatefulElement;
   private _state = {};
 
