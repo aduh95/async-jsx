@@ -38,6 +38,21 @@ dom-portal {
 }
 ```
 
+### With Babel
+
+You can use the `@babel/plugin-transform-react-jsx` package:
+
+```json
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-react-jsx",
+      { "pragma": "h", "pragmaFrag": "Fragment" }
+    ]
+  ]
+}
+```
+
 ### With dynamic imports
 
 You can define a component in a separate file and lazy-load it:
