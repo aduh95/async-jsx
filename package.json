@@ -1,0 +1,26 @@
+{
+  "name": "@aduh95/async-jsx",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "jsx",
+    "react",
+    "typescript"
+  ],
+  "author": "Antoine du Hamel <duhamelantoine1995@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.6.3"
+  }
+}
