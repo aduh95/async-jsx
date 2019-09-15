@@ -1,17 +1,17 @@
 {
   "name": "@aduh95/async-jsx",
   "version": "0.1.0",
-  "description": "",
+  "description": "JSX syntax for vanilla JS, and async",
   "main": "index.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "yes"
+    "url": "https://github.com/aduh95/async-jsx.git"
   },
   "keywords": [
     "jsx",
