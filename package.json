@@ -1,6 +1,6 @@
 {
   "name": "@aduh95/async-jsx",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "JSX syntax for vanilla JS, and async",
   "main": "index.js",
   "directories": {
