@@ -1,6 +1,6 @@
 {
   "name": "@aduh95/async-jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "JSX syntax for vanilla JS, and async",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,7 +8,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepack": "tsc"
   },
   "repository": {
     "type": "git",
