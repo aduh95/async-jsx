@@ -2,7 +2,8 @@
   "name": "@aduh95/async-jsx",
   "version": "0.1.0",
   "description": "JSX syntax for vanilla JS, and async",
-  "main": "index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib"
   },
