@@ -10,12 +10,16 @@ export default function renderAsync(
   const wrapper = document.createElement(ASYNC_WRAPPER) as AsyncElement;
   const { prototype } = AsyncElement;
 
-  if ((placeholder as Promise<ChildNode>).then) {
+  if (!placeholder) {
+    // No placeholder, no op
+  } else if ((placeholder as Promise<ChildNode>).then) {
     (placeholder as Promise<ChildNode>)
       .then(prototype.placeholder.bind(wrapper))
       .catch(console.warn);
   } else if ((placeholder as ChildNode).replaceWith) {
     wrapper.placeholder(placeholder as ChildNode);
+  } else {
+    throw new TypeError("Unsuitable placeholder provided");
   }
 
   asyncElement
