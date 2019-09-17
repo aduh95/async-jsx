@@ -9,6 +9,7 @@ export { default as Component } from "./Component.js";
 export { default as lazy } from "./lazy.js";
 export { default as Suspense } from "./Suspense.js";
 
-export { default as h } from "./createElement.js";
+export { default as h, default as createElement } from "./createElement.js";
+export { default as createSVGElement } from "./createSVGElement.js";
 
 export { default as StatefulComponent } from "./StatefulComponent.js";
