@@ -17,9 +17,7 @@ export default async function h(
       props.ref = undefined;
     }
     if ("object" === typeof props.style) {
-      Object.entries(props.style as ({
-        [propertyName: string]: string;
-      })).forEach(([propertyName, value]) =>
+      Object.entries(props.style).forEach(([propertyName, value]) =>
         domElement.style.setProperty(propertyName, value)
       );
       props.style = undefined;

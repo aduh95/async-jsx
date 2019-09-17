@@ -37,6 +37,12 @@ export default async function h(
           refMap.set(props.ref, element);
           props.ref = undefined;
         }
+        if ("object" === typeof props.style) {
+          Object.entries(props.style).forEach(([propertyName, value]) =>
+            (element as HTMLElement).style.setProperty(propertyName, value)
+          );
+          props.style = undefined;
+        }
         Object.entries(props)
           .filter(([name, value]) => value !== undefined)
           .forEach(([name, value]) =>

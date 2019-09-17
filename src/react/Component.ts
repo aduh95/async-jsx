@@ -6,6 +6,11 @@ import {
 
 export interface Props {
   ref: { current: Node };
+  style?:
+    | string
+    | {
+        [propertyName: string]: string;
+      };
   [key: string]: any;
 }
 
