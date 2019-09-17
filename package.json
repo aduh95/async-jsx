@@ -1,6 +1,6 @@
 {
   "name": "@aduh95/async-jsx",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "JSX syntax for vanilla JS, and async",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
