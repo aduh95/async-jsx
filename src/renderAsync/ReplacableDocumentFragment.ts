@@ -1,4 +1,5 @@
-export default class ReplacableDocumentFragment extends DocumentFragment {
+export default class ReplacableDocumentFragment extends DocumentFragment
+  implements ChildNode {
   private _children: ChildNode[] = [];
 
   static from(frag: DocumentFragment) {
@@ -18,7 +19,8 @@ export default class ReplacableDocumentFragment extends DocumentFragment {
     this._children[0].before(...elements);
   }
   after(...elements: (Node | string)[]) {
-    this._children[this._children.length - 1].after(...elements);
+    const { length, [length - 1]: lastChild } = this._children;
+    lastChild.after(...elements);
   }
 
   private replaceWithDocumentFragment(element: DocumentFragment) {
@@ -35,8 +37,8 @@ export default class ReplacableDocumentFragment extends DocumentFragment {
 
     for (let i = length; i < childElementCount; i++) {
       this._children.push(newElements[i]);
-      newElements[length].after(newElements[i]);
     }
+    newElements[length - 1].after(element);
   }
 
   replaceWithSingleElement(element: Node) {
