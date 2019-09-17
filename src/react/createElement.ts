@@ -47,7 +47,7 @@ export default async function h(
       break;
 
     default:
-      element = "render" in element ? await element.render() : await element;
+      element = "_render" in element ? await element._render() : await element;
   }
 
   if (children.length && (element as Element).append) {
