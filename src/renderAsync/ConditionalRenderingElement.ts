@@ -44,7 +44,9 @@ export default class ConditionalRenderingElement extends AsyncElement {
   }
 
   setState(state: number | string) {
-    if (state !== this.currentState) {
+    if (state === this.currentState) {
+      return Promise.resolve();
+    } else {
       this.currentState = state;
       return this._setElement(this.states[state]);
     }
