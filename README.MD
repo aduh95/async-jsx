@@ -179,7 +179,47 @@ difference may not be visible on that small example, but you can imagine that
 having a whole site re-render everytime something change will put a lot of
 pressure on small-CPU clients.
 
+### SVG Elements
+
+Because SVG Elements cannot be created using `Document.prototype.createElement`,
+but by `Document.prototype.createElementNS`, they cannot be created by the usual
+`h` p(or `createElement`) function. pIf you want to create SVG elements using
+JSX, you can put them in a separate module:
+
+```js
+// Logo.js
+import { createSVGElement as h } from "../utils/jsx.js";
+
+export default () => (
+  <svg>
+    <path />
+  </svg>
+);
+```
+
+Then you can import this module in another component:
+
+```js
+import { Component, h } from "../utils/jsx.js";
+import Logo from "./Logo.js";
+
+export default class Header extends Component {
+  render() {
+    return (
+      <header>
+        <Logo />
+        <h1>Title</h1>
+      </header>
+    );
+  }
+}
+```
+
 ## API
 
 This repo is using TypeScript, you can use it to have access to the
 documentation during development.
+
+```
+
+```
