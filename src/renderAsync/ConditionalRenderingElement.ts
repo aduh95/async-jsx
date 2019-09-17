@@ -10,9 +10,10 @@ export default class ConditionalRenderingElement extends AsyncElement {
 
   private __setElement = this._setElement.bind(this);
 
-  async _setElement(element: Appendable) {
+  async _setElement(element?: Appendable) {
     switch (typeof element) {
       case "undefined":
+        super._setElement(document.createComment("no element"));
         break;
 
       case "string":
@@ -24,7 +25,9 @@ export default class ConditionalRenderingElement extends AsyncElement {
         break;
 
       default:
-        if ((element as Node).nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
+        if (element === null) {
+          await this._setElement();
+        } else if ((element as Node).nodeType === Node.DOCUMENT_FRAGMENT_NODE) {
           super._setElement(
             ReplacableDocumentFragment.from(element as DocumentFragment)
           );
