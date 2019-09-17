@@ -10,10 +10,16 @@ export default async function h(
 ) {
   switch (typeof element) {
     case "function":
-      if (element.prototype && element.prototype.constructor === element) {
-        //@ts-ignore
-        const component = new element(props, children) as Component;
-        if ("function" !== typeof component._render) debugger;
+      if (
+        element.prototype &&
+        "function" === typeof element.prototype._render
+      ) {
+        const component = new ((element as any) as {
+          new (
+            props: Props,
+            children: (ComponentChildren | ComponentChildren[])[]
+          ): Component;
+        })(props, children) as Component;
         element = await component._render();
       } else {
         element = await element(props, children as ComponentChildren[]);
