@@ -1,14 +1,14 @@
-export { default as createPortal } from "./createPortal";
+export { default as createPortal } from "./createPortal.js";
 
-export { default as createRef } from "./createRef";
+export { default as createRef } from "./createRef.js";
 
-export { default as Fragment } from "./Fragment";
+export { default as Fragment } from "./Fragment.js";
 
-export { default as Component } from "./Component";
+export { default as Component } from "./Component.js";
 
-export { default as lazy } from "./lazy";
-export { default as Suspense } from "./Suspense";
+export { default as lazy } from "./lazy.js";
+export { default as Suspense } from "./Suspense.js";
 
-export { default as h } from "./createElement";
+export { default as h } from "./createElement.js";
 
-export { default as StatefulComponent } from "./StatefulComponent";
+export { default as StatefulComponent } from "./StatefulComponent.js";

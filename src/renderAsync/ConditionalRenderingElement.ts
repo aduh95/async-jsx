@@ -1,6 +1,6 @@
-import AsyncElement from "./AsyncElement";
-import ReplacableDocumentFragment from "./ReplacableDocumentFragment";
-import { StateCollection, Appendable } from "./StateCollection";
+import AsyncElement from "./AsyncElement.js";
+import ReplacableDocumentFragment from "./ReplacableDocumentFragment.js";
+import { StateCollection, Appendable } from "./StateCollection.js";
 
 export const CONDITIONAL_WRAPPER = "conditional-element";
 

@@ -1,6 +1,9 @@
-import { refMap } from "./createRef";
-import Component, { Props } from "./Component";
-import { Appendable, ComponentChildren } from "../renderAsync/StateCollection";
+import { refMap } from "./createRef.js";
+import Component, { Props } from "./Component.js";
+import {
+  Appendable,
+  ComponentChildren,
+} from "../renderAsync/StateCollection.js";
 const EVENT_PROP = /^on[A-Z]/;
 
 export default async function h(

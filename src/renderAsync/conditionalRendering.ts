@@ -1,8 +1,8 @@
 import ConditionalRenderingElement, {
   CONDITIONAL_WRAPPER,
-} from "./ConditionalRenderingElement";
+} from "./ConditionalRenderingElement.js";
 
-import { StateCollection } from "./StateCollection";
+import { StateCollection } from "./StateCollection.js";
 
 export default function conditionalRendering(
   states: StateCollection,

@@ -1,6 +1,6 @@
-import { refMap } from "./createRef";
-import { Props } from "./Component";
-import { ComponentChildren } from "../renderAsync/StateCollection";
+import { refMap } from "./createRef.js";
+import { Props } from "./Component.js";
+import { ComponentChildren } from "../renderAsync/StateCollection.js";
 
 const SVG_NAMESPACE = "http://www.w3.org/2000/svg";
 

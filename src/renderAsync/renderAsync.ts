@@ -1,6 +1,6 @@
-import AsyncElement, { ASYNC_WRAPPER } from "./AsyncElement";
+import AsyncElement, { ASYNC_WRAPPER } from "./AsyncElement.js";
 
-import { AsyncAppendable, SynchroneAppendable } from "./StateCollection";
+import { AsyncAppendable, SynchroneAppendable } from "./StateCollection.js";
 
 type FallbackCallback = (
   e: Error

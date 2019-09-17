@@ -1,6 +1,9 @@
-import h from "./createElement";
-import { Props } from "./Component";
-import { ComponentChildren, Appendable } from "../renderAsync/StateCollection";
+import h from "./createElement.js";
+import { Props } from "./Component.js";
+import {
+  ComponentChildren,
+  Appendable,
+} from "../renderAsync/StateCollection.js";
 
 interface AppendableModule {
   default: Appendable | Promise<Appendable>;

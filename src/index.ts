@@ -1,2 +1,2 @@
-export * from "./react/index";
-export * from "./renderAsync/index";
+export * from "./react/index.js";
+export * from "./renderAsync/index.js";

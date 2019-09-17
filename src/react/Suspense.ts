@@ -1,9 +1,9 @@
-import renderAsync from "../renderAsync/renderAsync";
-import Component from "./Component";
+import renderAsync from "../renderAsync/renderAsync.js";
+import Component from "./Component.js";
 import {
   AsyncAppendable,
   SynchroneAppendable,
-} from "../renderAsync/StateCollection";
+} from "../renderAsync/StateCollection.js";
 
 interface SuspenseType {
   props: {

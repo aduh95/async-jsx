@@ -1,4 +1,4 @@
-import Component from "./Component";
+import Component from "./Component.js";
 
 const STATEFUL_ELEMENT_NAME = "stateful-element";
 

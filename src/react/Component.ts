@@ -2,7 +2,7 @@ import {
   AsyncAppendable,
   ComponentChildren,
   SynchroneAppendable,
-} from "../renderAsync/StateCollection";
+} from "../renderAsync/StateCollection.js";
 
 export interface Props {
   ref: { current: Node };

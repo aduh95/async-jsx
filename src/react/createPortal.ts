@@ -2,7 +2,7 @@ import {
   Appendable,
   ComponentChildren,
   SynchroneAppendable,
-} from "../renderAsync/StateCollection";
+} from "../renderAsync/StateCollection.js";
 
 const PORTAL_ELEMENT_NAME = "dom-portal";
 
