@@ -1,1 +1,1 @@
-export default () => document.createDocumentFragment();
+export default () => Promise.resolve(document.createDocumentFragment());
