@@ -18,7 +18,11 @@ export default class Component {
   protected props: Props;
 
   constructor(props: Props, children: ComponentChildren[]) {
-    this.props = { children, ...props };
+    this.props = { ...props };
+    Object.defineProperty(this.props, "children", {
+      get: () => children,
+      enumerable: false,
+    });
   }
 
   render() {
