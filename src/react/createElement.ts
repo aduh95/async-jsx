@@ -30,7 +30,9 @@ export default async function h(
       break;
 
     case "string":
-      element = document.createElement(element);
+      element = document.createElement(element, {
+        is: props == null ? undefined : props.is,
+      });
 
       if (props) {
         if (props.ref) {
