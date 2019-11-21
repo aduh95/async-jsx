@@ -1,6 +1,6 @@
 {
   "name": "@aduh95/async-jsx",
-  "version": "0.2.0-0",
+  "version": "0.2.0",
   "description": "JSX syntax for vanilla JS, and async",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -22,6 +22,6 @@
   "author": "Antoine du Hamel <duhamelantoine1995@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.2"
   }
 }

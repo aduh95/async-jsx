@@ -218,8 +218,4 @@ export default class Header extends Component {
 ## API
 
 This repo is using TypeScript, you can use it to have access to the
-documentation during development.
-
-```
-
-```
+documentation during development. The API is defined by the `.d.ts` files.
