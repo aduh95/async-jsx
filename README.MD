@@ -3,7 +3,7 @@
 This package aims to give you the opportunity to use the JSX syntax introduced
 by React, without using React at all.
 
-Key differrences with React API:
+Key differences with React API:
 
 - No VirtualDOM (less overhead, but also less reactivity)
 - Everything is asynchronous
@@ -25,7 +25,7 @@ element.then(domElement => console.log(domElement instanceof HTMLElement)); // t
 document.body.append(renderAsync(element));
 ```
 
-It is recommanded to add this CSS to your page to avoid custom elements leaking
+It is recommended to add this CSS to your page to avoid custom elements leaking
 into your design:
 
 ```css
@@ -130,11 +130,11 @@ export default class App extends Component {
 }
 ```
 
-### StatfulComponent
+### StatefulComponent
 
 I have added a React-compatible `StatefulComponent`, which can be used the same
 way as a `React.Component`. However, because of the lack of VirtualDOM, it can
-be highly inneficient to use it. For example, let's take the Clocl example from
+be highly inefficient to use it. For example, let's take the Clock example from
 React docs:
 
 ```js
@@ -176,7 +176,7 @@ document
 
 This will work apparently, but at each tick, 3 DOM elements are initiated. Perf
 difference may not be visible on that small example, but you can imagine that
-having a whole site re-render everytime something change will put a lot of
+having a whole site re-render every time something change will put a lot of
 pressure on small-CPU clients.
 
 ### SVG Elements
