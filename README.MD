@@ -20,7 +20,7 @@ const element = <div>Hello World</div>;
 
 console.log(element instanceof Promise); // true
 
-element.then(domElement => console.log(domElement instanceof HTMLElement)); // true
+element.then((domElement) => console.log(domElement instanceof HTMLElement)); // true
 
 document.body.append(renderAsync(element));
 ```
@@ -77,7 +77,7 @@ You can define a component in a separate file and lazy-load it:
 import { h } from "@aduh95/async-jsx";
 
 // You can use an arrow function instead of a class
-export default props => (
+export default (props) => (
   <div className={props.className}>Hello {props.name}</div>
 );
 ```
@@ -102,14 +102,14 @@ export default class App extends Component {
   handleNewName(ev) {
     const { target } = ev;
     this.greetingName = target.value;
-    this.stateObservers.forEach(fn => fn("ready"));
+    this.stateObservers.forEach((fn) => fn("ready"));
   }
 
   render() {
     return (
       <>
         <h1>Welcome</h1>
-        {conidtionalRendering(
+        {conditionalRendering(
           {
             ready: <Greetings name={this.greetingName} />,
             askForName: (
