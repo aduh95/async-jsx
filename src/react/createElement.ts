@@ -1,8 +1,9 @@
 import { refMap } from "./createRef.js";
 import Component, { Props } from "./Component.js";
-import {
+import type {
   Appendable,
   ComponentChildren,
+  SynchroneAppendable,
 } from "../renderAsync/StateCollection.js";
 const EVENT_PROP = /^on[A-Z]/;
 
@@ -17,7 +18,7 @@ export default async function h(
         element.prototype &&
         "function" === typeof element.prototype._render
       ) {
-        const component = new ((element as any) as {
+        const component = new (element as any as {
           new (
             props: Props,
             children: (ComponentChildren | ComponentChildren[])[]
@@ -55,15 +56,17 @@ export default async function h(
               : (element as Element).setAttribute(name, value)
           );
       }
+      if (children.length && (element as Element).append) {
+        const subElements = await Promise.all(
+          children.flat(Infinity) as Promise<SynchroneAppendable>[]
+        );
+        (element as Element).append(...subElements.filter(Boolean));
+      }
       break;
 
     default:
       element = "_render" in element ? await element._render() : await element;
   }
 
-  if (children.length && (element as Element).append) {
-    const subElements: Node[] = await Promise.all(children.flat(Infinity));
-    (element as Element).append(...subElements.filter(Boolean));
-  }
   return element;
 }
